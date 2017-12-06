@@ -54,7 +54,7 @@ yaourt -S spotify
 echo "\n\n"
 
 echo "Installing some important libraries\n\n"
-sudo pacman -S ntfs-3g gcc-fortran
+sudo pacman -S ntfs-3g gcc-fortran auctex
 echo "\n\n"
 
 echo "DONE!!!"
