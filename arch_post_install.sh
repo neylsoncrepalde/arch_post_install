@@ -40,6 +40,10 @@ echo "Installing RStudio\n\n"
 yaourt -S rstudio-desktop-bin
 echo "\n\n"
 
+echo "Packages necessary to R leaflet\n\n"
+yaourt -S udunits gdal proj
+echo "\n\n"
+
 echo "Installing Python Anaconda\n\n"
 cd Downloads
 wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
