@@ -6,8 +6,30 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                      ("marmalade" . "https://marmalade-repo.org/packages/")
                      ("melpa" . "https://melpa.org/packages/")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Automatically install missing packages
+; list the packages you want
+(setq package-list '(auto-complete-c-headers auto-complete better-defaults company-auctex auctex 
+                                             company-statistics company edit-indirect find-file-in-project 
+                                             flymake-cursor flymake-google-cpplint flymake-easy google-c-style 
+                                             idle-highlight-mode ido-ubiquitous ido-completing-read+ iedit ivy 
+                                             magit git-commit magit-popup markdown-mode memoize org org-journal 
+                                             pandoc pandoc-mode hydra paredit popup s scpaste htmlize smartparens 
+                                             dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet))
+
+; activate all the packages (in particular autoloads)
 (package-initialize)
 
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
