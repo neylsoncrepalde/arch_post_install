@@ -38,6 +38,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(setq inhibit-startup-message t) ;; hide the startup message
+(global-linum-mode t) ;; enable line numbers globally
+
 (require 'ess-site) ; ESS
 (elpy-enable)       ; Enable Elpy for having it like a python IDE
 (require 'py-autopep8)    ; Style guide for Python - PEP 8 - precisa instalar jedi e flake8 via pip ou conda
