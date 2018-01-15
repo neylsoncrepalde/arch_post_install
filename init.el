@@ -16,7 +16,8 @@
                                              idle-highlight-mode ido-ubiquitous ido-completing-read+ iedit ivy 
                                              magit git-commit magit-popup markdown-mode memoize org org-journal 
                                              pandoc pandoc-mode hydra paredit popup s scpaste htmlize smartparens 
-                                             dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet))
+                                             dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet
+                                             elpy py-autopep8))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -37,7 +38,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(require 'ess-site)
+(require 'ess-site) ; ESS
+(elpy-enable)       ; Enable Elpy for having it like a python IDE
+(require 'py-autopep8)    ; Style guide for Python - PEP 8 - precisa instalar jedi e flake8 via pip ou conda
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save) ; Enable on save
 
 (setq latex-run-command "pdflatex")
 (setq reftex-default-bibliography '("/home/neylson/tese/BIBDOUTORADO.bib"))
