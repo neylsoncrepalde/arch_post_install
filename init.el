@@ -4,7 +4,6 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                     ("marmalade" . "https://marmalade-repo.org/packages/")
                      ("melpa" . "https://melpa.org/packages/")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -17,7 +16,7 @@
                                              magit git-commit magit-popup markdown-mode memoize org org-journal 
                                              pandoc pandoc-mode hydra paredit popup s scpaste htmlize smartparens 
                                              dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet
-                                             elpy py-autopep8))
+                                             elpy py-autopep8 ess))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
