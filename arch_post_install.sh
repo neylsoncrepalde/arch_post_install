@@ -57,6 +57,9 @@ gpg --keyserver hkps://pgp.mit.edu --recv-keys BBEBDCB318AD50EC6865090613B00F1FD
 yaourt -S spotify
 echo "\n"
 
+echo "Installing Skype"
+yaourt -S skypeforlinux-stable-bin
+
 echo "Installing some important libraries\n"
 sudo pacman -S ntfs-3g gcc-fortran auctex
 echo "\n"
