@@ -1,8 +1,8 @@
-echo "Installing Firefox\n\n"
+echo "Installing Firefox\n"
 sudo pacman -S firefox opera gst-plugins-ugly
-echo "\n\n"
+echo "\n"
 
-echo "Installing yaourt\n\n"
+echo "Installing yaourt\n"
 sudo pacman -S --needed base-devel git wget yajl
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
@@ -13,52 +13,52 @@ cd yaourt
 makepkg -si
 cd ..
 sudo rm -dR yaourt/ package-query/
-echo "\n\n"
+echo "\n"
 
-echo "Installing Emacs and Sublime\n\n"
+echo "Installing Emacs and Sublime\n"
 sudo pacman -S emacs
 yaourt -S sublime-text-dev
-echo "\n\n"
+echo "\n"
 
-echo "Installing MS Fonts\n\n"
+echo "Installing MS Fonts\n"
 yaourt -S ttf-ms-fonts
-echo "\n\n"
+echo "\n"
 
-echo "Installing Musescore\n\n"
+echo "Installing Musescore\n"
 sudo pacman -S musescore
-echo "\n\n"
+echo "\n"
 
-echo "Installing R (last version available) and Tex and JDK and Eclipse\n\n"
+echo "Installing R (last version available) and Tex and JDK and Eclipse\n"
 sudo pacman -S r texlive-most texlive-langextra texstudio jdk8-openjdk eclipse-java
-echo "\n\n"
+echo "\n"
 
-echo "Making Java work in R\n\n"
+echo "Making Java work in R\n"
 sudo R CMD javareconf
-echo "\n\n"
+echo "\n"
 
-echo "Installing RStudio\n\n"
+echo "Installing RStudio\n"
 yaourt -S rstudio-desktop-bin
-echo "\n\n"
+echo "\n"
 
-echo "Packages necessary to R leaflet\n\n"
+echo "Packages necessary to R leaflet\n"
 yaourt -S udunits gdal proj
-echo "\n\n"
+echo "\n"
 
-echo "Installing Python Anaconda\n\n"
+echo "Installing Python Anaconda\n"
 cd Downloads
-wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
-bash Anaconda3-4.4.0-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+bash Anaconda3-5.1.0-Linux-x86_64.sh
 cd ..
 yaourt -S libselinux
-echo "\n\n"
+echo "\n"
 
-echo "Installing Spotify\n\n"
+echo "Installing Spotify\n"
 gpg --keyserver hkps://pgp.mit.edu --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 yaourt -S spotify
-echo "\n\n"
+echo "\n"
 
-echo "Installing some important libraries\n\n"
+echo "Installing some important libraries\n"
 sudo pacman -S ntfs-3g gcc-fortran auctex
-echo "\n\n"
+echo "\n"
 
 echo "DONE!!!"
