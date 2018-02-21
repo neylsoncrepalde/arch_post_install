@@ -61,7 +61,7 @@ echo "Installing Skype"
 yaourt -S skypeforlinux-stable-bin
 
 echo "Installing some important libraries\n"
-sudo pacman -S ntfs-3g gcc-fortran auctex
+sudo pacman -S ntfs-3g gcc-fortran auctex pandoc pandoc-citeproc pandoc-crossref
 echo "\n"
 
 echo "DONE!!!"
