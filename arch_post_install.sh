@@ -1,8 +1,10 @@
-echo "Installing Firefox\n"
+echo "Installing Firefox"
+echo ""
 sudo pacman -S firefox opera gst-plugins-ugly
-echo "\n"
+echo ""
 
-echo "Installing yaourt\n"
+echo "Installing yaourt"
+echo ""
 sudo pacman -S --needed base-devel git wget yajl
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
@@ -13,55 +15,67 @@ cd yaourt
 makepkg -si
 cd ..
 sudo rm -dR yaourt/ package-query/
-echo "\n"
+echo ""
 
-echo "Installing Emacs and Sublime\n"
+echo "Installing Emacs and Sublime"
+echo ""
 sudo pacman -S emacs
 yaourt -S sublime-text-dev
-echo "\n"
+echo ""
 
-echo "Installing MS Fonts\n"
+echo "Installing MS Fonts"
+echo ""
 yaourt -S ttf-ms-fonts
-echo "\n"
+echo ""
 
-echo "Installing Musescore\n"
+echo "Installing Musescore"
+echo ""
 sudo pacman -S musescore
-echo "\n"
+echo ""
 
-echo "Installing R (last version available) and Tex and JDK and Eclipse\n"
+echo "Installing R (last version available) and Tex and JDK and Eclipse"
+echo ""
 sudo pacman -S r texlive-most texlive-langextra texstudio jdk8-openjdk eclipse-java
-echo "\n"
+echo ""
 
-echo "Making Java work in R\n"
+echo "Making Java work in R"
+echo ""
 sudo R CMD javareconf
-echo "\n"
+echo ""
 
-echo "Installing RStudio\n"
+echo "Installing RStudio"
+echo ""
 yaourt -S rstudio-desktop-bin
-echo "\n"
+echo ""
 
-echo "Packages necessary to R leaflet\n"
+echo "Packages necessary to R leaflet"
+echo ""
 yaourt -S udunits gdal proj
-echo "\n"
+echo ""
 
-echo "Installing Python Anaconda\n"
+echo "Installing Python Anaconda"
+echo ""
 cd Downloads
 wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 bash Anaconda3-5.1.0-Linux-x86_64.sh
 cd ..
 yaourt -S libselinux
-echo "\n"
+echo ""
 
-echo "Installing Spotify\n"
+echo "Installing Spotify"
+echo ""
 gpg --keyserver hkps://pgp.mit.edu --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 yaourt -S spotify
-echo "\n"
+echo ""
 
 echo "Installing Skype"
+echo ""
 yaourt -S skypeforlinux-stable-bin
+echo ""
 
-echo "Installing some important libraries\n"
+echo "Installing some important libraries"
+echo ""
 sudo pacman -S ntfs-3g gcc-fortran auctex pandoc pandoc-citeproc pandoc-crossref
-echo "\n"
+echo ""
 
 echo "DONE!!!"
