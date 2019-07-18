@@ -7,7 +7,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "http://melpa.org/packages/")))
 
-(setq package-list '(auto-complete company-auctex auctex company-statistics company flymake-cursor flymake-easy idle-highlight-mode iedit ivy magit git-commit magit-popup markdown-mode memoize org org-journal pandoc pandoc-mode hydra paredit popup s scpaste htmlize smartparens dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet ess polymode poly-R spacemacs-theme)
+(setq package-list '(auto-complete company-auctex auctex company-statistics company flymake-cursor flymake-easy idle-highlight-mode iedit ivy magit git-commit magit-popup markdown-mode memoize org org-journal pandoc pandoc-mode hydra paredit popup s scpaste htmlize smartparens dash smex sr-speedbar with-editor async yasnippet-snippets yasnippet ess polymode poly-R spacemacs-theme exec-path-from-shell)
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
