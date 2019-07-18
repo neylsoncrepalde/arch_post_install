@@ -28,8 +28,10 @@
 (add-hook 'markdown-mode-hook 'pandoc-mode)
 (add-hook 'pandoc-mode-hook 'pandoc-load-default-settings)
 
-;(exec-path-from-shell-initialize)
-
+(exec-path-from-shell-initialize)
+(exec-path-from-shell-copy-env "LC_ALL")
+(exec-path-from-shell-copy-env "LANG")
+      
 (require 'better-defaults)
 
 (setq latex-run-command "pdflatex")
