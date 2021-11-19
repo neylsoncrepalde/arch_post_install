@@ -12,7 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jalvesaq/Nvim-R'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'commit': 'd98f896'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
